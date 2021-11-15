@@ -54,7 +54,7 @@ grid-template-areas:
 
 ### Continued development
 
-I want to keep focused on using CSS and Flexbox. I'm not (yet) completely comfortable with them, but I definitely like their simplicity :)
+I want to keep focused on using CSS Grid and Flexbox. I'm not (yet) completely comfortable with them, but I definitely like their simplicity :)
 
 ### Useful resources
 
