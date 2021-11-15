@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Red Hat Display;
+    src: url(static/RedHatDisplay-Regular.ttf);
+  }
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html, body, .container {
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        ". . ."
+        ". card ."
+        ". . .";
+}
+
+.card {
+    display: grid;
+    grid-template-areas:
+        ". header ."
+        ". content ."
+        ". attr .";
+    min-width: 450px;
+    max-width: 450px;
+    grid-area: card;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Red Hat Display;
+    color: hsl(224, 23%, 55%);
+    font-size: 14px;
+}
+
+.header {
+    display: grid;
+    grid-area: header;
+}
+
+.content {
+    display: grid;
+    grid-area: content;
+    align-content: center;
+    justify-self: center;
+    min-width: 18rem;
+    max-width: 18rem;
+}
+
+.content__order {
+    grid-template-areas: 
+    "summary"
+    "plan";
+}
+
+.content__order__summary {
+    grid-area: summary;
+    text-align: center;
+}
+
+.content__order__summary__title {
+    color: hsl(223, 47%, 23%);
+    font-size: 20px;
+    font-weight: 900;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.content__order__summary__description {
+    line-height: 1.2rem;
+}
+
+.content__order__plan {
+    display: grid;
+    grid-area: plan;
+    grid-template-areas: "icon info change";
+    background: hsl(225, 100%, 98%);
+    justify-items: center;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    padding: 1rem;
+    border: solid;
+    border-width: 0px;
+    border-radius: 10px;
+    align-items: center;
+    grid-auto-rows: 3rem;
+}
+
+.content__order__plan__icon {
+    grid-area: icon;
+}
+
+.content__order__plan__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    grid-area: info;
+    grid-template-areas:
+        "plan-title"
+        "plan-cost";
+    justify-content: space-between;
+}
+
+.content__order__plan__info__title {
+    grid-area: plan-title;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.content__order__plan__info__cost {
+    grid-area: plan-cost;
+}
+
+.content__order__plan__change {
+    grid-area: change;
+}
+
+.content__order__plan__change__button {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    border: none;
+    background-color: inherit;
+}
+
+.content__order__plan__change__button:hover {
+    color: hsl(224, 23%, 55%);
+}
+
+.content__footer {
+    display: grid;
+    grid-template-areas: 
+        "proceed"
+        "cancel";
+    grid-gap: 10%;
+}
+
+button {
+    height: 2rem;
+    font-family: inherit;
+    font-weight: 700;
+    height: 2.5rem;
+}
+
+.content__footer__proceed {
+    grid-area: proceed;
+    background: hsl(245, 75%, 52%);
+    color: white;
+    border-radius: 0;
+    border: solid;
+    border-width: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.content__footer__proceed:hover {
+    background: hsl(224, 23%, 55%);
+}
+
+.content__footer__cancel {
+    grid-area: cancel;
+    background: none;
+    color: hsl(224, 23%, 55%);
+    border: solid;
+    border-width: 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content__footer__cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+.attribution {
+    grid-area: attr;
+    padding: 1rem;
+    font-size: 11px;
+    text-align: center;  
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
